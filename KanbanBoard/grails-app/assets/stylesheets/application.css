@@ -1,0 +1,461 @@
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS file within this directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the top of the
+* compiled file, but it's generally better to create a new file per style scope.
+*
+*= require bootstrap
+*= require grails
+*= require main
+*= require mobile
+*= require_self
+*/
+
+/*
+    PALETTE
+    Header:         #0359A5
+    Body:           #C2E0FA
+
+    a:              #4786BD     main #131 per i nav
+    a:hover:        #8CB3D6     qui per i login
+    a:active:       #ADC3D6
+
+    board:          #2e6da4
+    board:hover:    #3D7FBA
+    board:active:   #4E87BA
+
+    column:         #1f5e95     (title - add)
+    column:hover    #3170a7
+    card:           #EFEFFF
+ */
+div.header{
+    background-color: #0359A5;
+    height:50px;
+}
+.header-title{
+    position: absolute;
+    font-size: 20px;
+    color: white;
+    z-index: 1;
+
+    padding-top:10px;
+    padding-left:20px;
+}
+
+div.login-bar{
+    display: inline-block;
+    text-align: right;
+    font-size: 17px;
+    width: 100%;
+
+    padding-right: 30px;
+    margin-top: 12px;
+}
+
+a#login{
+
+    padding: 5px;
+
+}
+
+.custombutton{
+    color: white;
+    text-decoration: none;
+    background-color: #4786BD;
+    border-radius: 5px;
+    padding:5px;
+}
+.custombutton:hover{
+    background-color: #8CB3D6;
+    color: white;
+    text-decoration: none;
+}
+
+.custombutton:active .custombutton:focus{
+    background-color: #ADC3D6;
+    color: white;
+    text-decoration: none;
+}
+input.custombutton{
+    padding-bottom: 3px;
+    border: none;
+}
+
+.logout-button, .account-button {
+    background-position: 0.3em center;
+    background-repeat: no-repeat;
+    padding-left: 35px;
+
+}
+.logout-button{
+    background-image: url(../images/skin/ic_exit_to_app_white_24dp_1x.png);
+}
+.account-button{
+    background-image: url(../images/skin/ic_account_circle_white_24dp_1x.png);
+}
+.back{
+    background-position: 0.3em center;
+    background-repeat: no-repeat;
+    text-indent: 25px;
+    background-image: url(../images/skin/ic_arrow_back_white_24dp_1x.png);
+}
+.adduser{
+    background-position: 0.3em center;
+    background-repeat: no-repeat;
+    text-indent: 25px;
+    background-image: url(../images/skin/ic_settings_white_24dp_1x.png);
+}
+a.deleteButtonBar
+{
+    background-color: rgba(230 , 50 , 50 , 0.8);
+    background-position: 0.3em center;
+    background-repeat: no-repeat;
+    text-indent: 25px;
+    padding-right: 10px;
+    background-image: url(../images/skin/ic_clear_white_24dp_1x.png);
+}
+a.deleteButtonBar:hover , a.deleteButtonBar:active{
+    background-color: rgba(255 , 100 , 100 , 0.9);
+}
+a.deleteButtonBar:focus {
+    background-color: rgba(255 , 100 , 100 , 0.9);
+    color: white;
+    text-decoration: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.buttons-bar{
+    position:absolute;
+    display: inline-block;
+    font-size: 17px;
+
+    padding-left: 15px;
+    margin-top: -42px;
+}
+
+.sub-title{
+    background-color: #4786BD;
+    color:white;
+    width:100%;
+    height: 50px;
+    padding-left: 20px;
+    margin-top: -41px;
+    padding-top: 15px;
+}
+.sub-title-noButtons
+{
+    margin-top: -28px;
+}
+
+
+.grails-logo-container{
+    background-color: #3C8BD1;
+    height: 350px;
+    margin-top: -27px;
+}
+.grails-logo
+{
+    padding-top: 30px;
+}
+
+div#title_b{
+    display: inline-block;
+    position: relative;
+}
+
+
+/* SEZIONE PAGINA DASHBOARD */
+
+div.board{
+    width: 23%;
+    height: 80px;
+    color:white;
+    background-color: #2e6da4;
+    float: left;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px #333333;
+}
+div.board:hover{
+    background-color: #3D7FBA;
+    box-shadow: none;
+}
+div.board:active{
+    background-color: #4E87BA;
+}
+
+p.nomeBoard {
+    color: white;
+
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+/* SEZIONE COLONNE */
+
+div.column-container
+{
+    margin-top: -5px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    transform:rotateX(180deg);
+    -ms-transform:rotateX(180deg); /* IE 9 */
+    -webkit-transform:rotateX(180deg);
+}
+
+
+div.column
+{
+    min-height:38px;
+    width: 200px;
+    display: inline-block;
+    color:white;
+    background-color: #2e6da4;
+    margin: 10px;
+    border-radius: 5px;
+
+    transform:rotateX(180deg);
+    -ms-transform:rotateX(180deg); /* IE 9 */
+    -webkit-transform:rotateX(180deg);
+
+}
+div.emptyColumn{
+    min-height:38px;
+    width: 200px;
+    display: inline-block;
+    color:white;
+    background-color: #555555;
+    margin: 10px;
+    border-radius: 5px;
+
+    transform:rotateX(180deg);
+    -ms-transform:rotateX(180deg); /* IE 9 */
+    -webkit-transform:rotateX(180deg);
+}
+p.emptyColumn-title{
+    background-color: #444444;
+    color: white;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+p.column-title{
+    color: white;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    background-color: #1f5e95;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.column-addcard{
+    text-align: center;
+    color: #eeeeee;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    background-color: #1f5e95;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+    background-position: 2.5em center;
+    background-repeat: no-repeat;
+    background-image: url(../images/skin/ic_add_circle_white_18dp_1x.png);
+}
+.emptyColumn-button , p.emptyColumn-title {
+    background-color: #444444;
+}
+
+.column-addcard:hover, p.column-title:hover
+{
+    background-color: #3170a7;
+}
+p.column-title:hover{
+    background-position: 173px 10px;
+    background-repeat: no-repeat;
+    /*background-image: url(../images/skin/delete_clm_crd.png);*/
+    background-image: url(../images/skin/ic_clear_white_18dp_1x.png);
+}
+.emptyColumn-button:hover{
+    background-color: #666666;
+}
+
+p.pdescrizione
+{
+    word-wrap: break-word;
+}
+.deleteColumn
+{
+    position: relative;
+    float: right;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top:10px;
+    padding-bottom: 5px;
+    background-color: transparent;
+    border: transparent;
+    margin-right: 10px;
+    margin-top: -36px;
+}
+
+.deleteColumn:hover
+{
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-image: url(../images/skin/ic_clear_white_18dp_1x.png);
+}
+input.deleteColumn:active , input.deleteColumn:visited , input.deleteColumn:focus {
+    background-color: transparent;
+    border: transparent;
+    box-shadow: none;
+}
+/* SEZIONE CARD */
+div.card-container
+{
+    background-color: #EFEFFF;
+    color: black;
+    margin: 8px;
+    white-space: normal;
+    border-radius:5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+div.card-container:hover{
+    background-position: 160px 5px;
+    background-repeat: no-repeat;
+    background-image: url(../images/skin/ic_clear_black_18dp_1x.png);
+    z-index: 0;
+}
+
+p.card-titolo
+{
+    font-weight: bold;
+    z-index: 0;
+}
+p.card-scadenza
+{
+    text-align: right;
+    font-size: 10px;
+}
+.deleteCard
+{
+    position: relative;
+    float: right;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top:10px;
+    padding-bottom: 5px;
+    background-color: transparent;
+    border: transparent;
+    margin-right: -8px;
+    margin-top: -21px;
+    z-index: 1;
+}
+
+.deleteCard:hover
+{
+    background-position: 1px 1px;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+input.deleteCard:active , input.deleteCard:visited , input.deleteCard:focus {
+    background-color: transparent;
+    border: transparent;
+    box-shadow: none;
+}
+/* SEZIONE FORM */
+.form-section{
+    color: #444444;
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 30px;
+}
+.form-section-registration{
+    color: #444444;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 30px;
+}
+
+.form{
+    background-color: #f4f4f4;
+    padding-top: 30px;
+    padding-bottom: 50px;
+
+    border-radius: 5px;
+}
+
+.form-submit {
+    margin-top: 40px;
+    margin-bottom: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.form-label{
+    text-align: right;
+    position: relative;
+    margin-right: 60%;
+}
+.form-descrizione{
+    margin-top: 5px;
+}
+.form-label label, .form-input input , .form-input textarea , #datapicker{
+    margin-bottom: 20px;
+}
+.form-input{
+    text-align: left;
+    position: relative;
+    margin-left: 41%;
+    margin-top: -100px;
+}
+.form-input-editBoard{
+    margin-top: -50px;
+}
+.gselect
+{
+    margin-top: -50px;
+    margin-bottom: 20px;
+}
+.gselect_inner /* Controlla la larghezza dei campi di riempimento <g:   */
+{
+    width: 80%;
+}
+
+.form-date-label{
+    text-align: right;
+    margin-right: 60%;
+}
+.form-date-input{
+    text-align: left;
+    margin-left: 40%;
+    margin-top: -27px;
+}
+
+
+p.inputError{
+    color: #ff4444;
+    background-color: rgba(255, 68, 68, .1);
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 10px;
+    margin-top: -30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
